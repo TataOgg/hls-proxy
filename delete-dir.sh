@@ -2,7 +2,7 @@
 set -e
 
 ID=$1
-DIR="/var/hls"
+DIR=${OUTDIR:-"/var/hls"}
 TIMEOUT=30
 rm -rf $DIR/${ID::2}/$ID
 echo "Deleted $DIR/${ID::2}/$ID"
